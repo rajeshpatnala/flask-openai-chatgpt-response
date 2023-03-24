@@ -17,7 +17,7 @@ class OpenAiGateway:
     def completion(self, requestData):
 
         endpoint = "https://api.openai.com/v1/chat/completions"
-        api_key = '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'
+        api_key = os.getenv['CHATGPT_API_KEY']
         headers = {"Authorization": f"Bearer {api_key}",
                    "Content-Type": "application/json"}
 
