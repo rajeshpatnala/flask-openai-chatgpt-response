@@ -23,8 +23,7 @@ class OpenAiGateway:
 
         response = requests.post(
             endpoint, json=json.loads(requestData), headers=headers)
-        print(response)
-        print(response.text)
+
         self.jsonparser.set_api_response(response.text)
 
         self.jsonparser.parse_api_response()
